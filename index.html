@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+    <title>forveg/sciuru home</title>
+    <style type="text/css">
+
+    @font-face {
+        font-family: SourceSerifPro;
+        src: url('assets/fonts/SourceSerifPro-Regular.otf');
+    }
+
+    :root { 
+        font-family: SourceSerifPro;
+        --main-width: 700px;
+        --content-gap: 15px;
+        --icon-progress-width: 25px;
+        --text-color: 'black';
+        --background: 'white';
+        --border-color: 'black';
+        --text-dark: rgb(218, 218, 218);
+        --background-dark: rgb(30, 30, 30);
+        --icon-complete-dark: "assets/check_circle_24dp_FILL0_wght400_GRAD0_opsz24.png";
+        --icon-progress-dark: "assets/construction_24dp_FILL0_wght400_GRAD0_opsz24.png";
+    }
+    
+    .body {
+        background-color: var(--background);
+        color: var(--text-color);
+    }
+
+    .main {
+        margin: 0 auto;
+        max-width: var(--main-width);
+        background-color: var(--background);
+        color: var(--text-color);
+    }
+
+    .post-entry {
+        background-color: var(--background);
+        color: var(--text-color);
+        max-width: 700px;
+        margin: 0 5px var(--content-gap) 5px;
+        border: solid 1px;
+        border-color: var(--border);
+        border-radius: 8px;
+        padding: 0 20px 10px 20px;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    .post-header {
+        display: flex;
+        margin: 10px 0 10px 0;
+        /*border: solid 1px red;*/
+    }
+    
+    .post-footer p {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .intro {
+        display: flex;
+        /*justify-content: center;*/
+        margin: 30px 5px 20px 10px;
+    }
+    .entry-github {
+        color: var(--text-color);
+    }
+    a {
+        color: var(--text-color);
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .intro-badge {
+        padding: 20px 0 20px 20px;
+        display: flex;
+        font-size: 25px;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .btn-lamp {
+        background-color: transparent;
+        height: 35px;
+        margin-top: 23px;
+        border: none;
+    }
+    .btn-lamp:hover {
+        filter: brightness(250%);
+    }
+  
+
+    .icon-progress {
+        margin-left: 10px;
+        padding-top: 5px;
+    }
+    .img-progress {
+        width: var(--icon-progress-width);
+    }
+    .copyright-footer {
+        color: var(--text-color);
+        font-size: 15px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .mail {
+        font-size: 15px;
+    }
+    
+    </style>
+</head>
+<body>
+    <main class="main">
+        <article class="intro">
+            <img id="forveg-logo" src="assets/54909033.png" width="120px" >
+            <div class="intro-badge">
+                forveg
+                <div class="mail">averessto@gmail.com</div>
+
+            </div>
+            <button id="btn-lamp" class="btn-lamp">
+                <img id="icon-theme" src="assets/nightlight_24dp_FILL0_wght400_GRAD0_opsz24.png" title="Switch theme" width=28px>
+            </button>
+
+        </article>
+
+        <article class="post-entry">
+            <header class="post-header">
+                <h2>Energy Time Series Prediction</h2>
+                <div class="icon-progress">
+                    <img src="assets/construction_24dp_FILL0_wght400_GRAD0_opsz24.png" title="Work in progress" class="img-progress">
+                </div>
+            </header>
+            <section class="post-desc">
+                <a href="https://github.com/forveg/ts-energy" class="entry-github">
+                    https://github.com/forveg/ts-energy</a>
+                  
+                <p>Predicting hourly energy price for the next 24 hours for European/Ural region of Russia, years 2018-2020, based on energy market data.</p>
+
+            </section>
+            <footer class="post-tags">
+                <p>#time-series #regression #lightgbm</p>
+            </footer>
+        </article>
+        <article class="post-entry">
+            <header class="post-header">
+                <h2>How Prophet Works</h2>
+                <div class="icon-progress">
+                    <img src="assets/check_circle_24dp_FILL0_wght400_GRAD0_opsz24.png" title="Complete" class="img-progress">
+                </div>
+            </header>
+            <section class="post-desc">
+                <a href="https://github.com/forveg/how-prophet-works" class="entry-github">
+                    https://github.com/forveg/how-prophet-works</a>
+                
+                <p>Patchy notes on how fb <a href="https://github.com/facebook/prophet/tree/main">prophet</a> works, for easier recall later on.</p>
+                <p>Part I is a brief walkthrough of the code base with key preprocessing steps and modeling choices highlighted. Part II is a demo reproduction of prophet with alternative mcmc backend (<a href="https://github.com/pyro-ppl/numpyro">numpyro</a>) for illustrative purposes.</p>
+
+            </section>
+            <footer class="post-tags">
+                <p>#time-series #regression #prophet #numpyro</p>
+            </footer>
+        </article>
+        <article class="post-entry">
+            <header class="post-header">
+                <h2>Stats.stackexchange Response Prediction</h2>
+                <div class="icon-progress">
+                    <img src="assets/construction_24dp_FILL0_wght400_GRAD0_opsz24.png" title="Work in progress" class="img-progress">
+                </div>
+            </header>
+            <section class="post-desc">
+                <a href="https://github.com/forveg/stackexchange-predict" class="entry-github">
+                    https://github.com/forveg/stackexchange-predict</a>
+
+                <p>Predicting whether a question, posted on <a href="https://stats.stackexchange.com/">stats.stackexchange.com</a> would receive any response.</p>
+                <p>I used <a href="https://archive.org/details/stackexchange_20231208">official stackexchange dump</a> (release 2023-12-08) and retrieved some additional data via API/scraping.</p>
+                <p>This has been the most exciting project so far, as the problem is rather open-ended and feature design is nontrivial. Still a vast room for improvement.</p>
+
+            </section>
+            <footer class="post-tags">
+                #time-series #classification #lightgbm #feature-engineering #scraping
+            </footer>
+        </article>
+        <article class="post-entry">
+            <header class="post-header">
+                <h2>Misc Utils</h2>
+            </header>
+            <section class="post-desc">
+                <a href="https://github.com/forveg/utils" class="entry-github">
+                    https://github.com/forveg/utils</a>
+
+                <p>A bunch of utils I typically use in my projects</p>
+
+            </section>
+            <footer class="post-footer">
+                #cross-validation #grid-search #time-series 
+            </footer>
+        </article>
+        <article class="post-entry">
+            <header class="post-header">
+                <h2>Club37: Is There Such A Thing?</h2>
+                <div class="icon-progress">
+                    <img src="assets/check_circle_24dp_FILL0_wght400_GRAD0_opsz24.png" title="Complete" class="img-progress">
+                </div>
+            </header>
+            <section class="post-desc">
+                <a href="https://github.com/forveg/club37" class="entry-github">
+                    https://github.com/forveg/club37</a>
+
+                <p>"The 27 Club is an informal list consisting mostly of popular musicians, artists, actors, and other celebrities who died at age 27."<br>
+                    <div style="text-align: right;">
+                        <a href="https://en.wikipedia.org/wiki/27_Club">https://en.wikipedia.org/wiki/27_Club</a><br>
+                    </div>
+                    Big names, rising stars, sudden deaths: is there a pattern? 27 Club theory has been debunked. What about 37 Club: an array of prominent Russian writers and poets, who died around age 37? Let's see. 
+                </p>
+            </section>
+            <footer class="post-tags">
+                #scraping #wikipedia #regex
+            </footer>
+        </article>
+        <div class="copyright-footer">&copy 2024 forveg</div>
+</main>
+<script>
+    function switchToDark(){
+        const style = getComputedStyle(document.body);
+        localStorage.setItem("color-theme", 'dark');
+        theme = 'dark';
+        
+        document.getElementById('forveg-logo').src = 'assets/54909033(2).png';
+        
+        document.body.style.setProperty("--text-color", style.getPropertyValue('--text-dark'));
+        document.body.style.setProperty("--background", style.getPropertyValue('--background-dark'));
+        document.body.style.setProperty("--border-color", style.getPropertyValue('--text-dark'));
+        document.body.style.background=style.getPropertyValue('--background-dark');
+        document.getElementById('icon-theme').src = "assets/light_mode_24dp_FILL0_wght400_GRAD0_opsz24(1).png";
+        [].forEach.call(document.getElementsByClassName('img-progress'), 
+        function (e) {
+            e.src = e.src.slice(0, e.src.length-4) + '_dark.png';
+        });
+    }
+
+    let theme = 'light';
+
+    if ((localStorage.getItem("color-theme") === "dark") || (window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        switchToDark();
+    }
+
+    document.getElementById("btn-lamp").addEventListener("click", () => {
+        if (theme==='dark') {
+            const style = getComputedStyle(document.body);
+            localStorage.setItem("color-theme", 'light');
+            theme = 'light';
+            
+            document.getElementById('forveg-logo').src = 'assets/54909033.png';
+            
+            document.body.style.setProperty("--text-color", "black");
+            document.body.style.setProperty("--background", "white");
+            document.body.style.setProperty("--border-color", "black");
+            document.body.style.background='white';
+            document.getElementById('icon-theme').src="assets/nightlight_24dp_FILL0_wght400_GRAD0_opsz24.png";
+            [].forEach.call(document.getElementsByClassName('img-progress'), 
+            function (e) {
+                e.src = e.src.slice(0, e.src.length-9) + '.png';
+            });
+        } else {
+            switchToDark();
+        }
+    })
+ 
+</script>
+</body>
+</html>
